@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      *:not(h3) {
+        font-size: xx-large;
+      }
+      h3 {
+        margin-bottom: 20px;
+        padding: 3px;
+      }
+
+      .container {
+        width: 75%;
+        margin: 30px auto;
+        text-align: center;
+      }
+      #product-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background-color: lightgray;
+      }
+      #image-product {
+        width: 50%;
+      }
+      #image-product img {
+        width: 100%;
+      }
+      #product-header {
+        width: 50%;
+        margin: 10px 20px;
+      }
+      #product-header h3 {
+        margin-top: 20px;
+      }
+      #product-header > *:not(h3) {
+        text-align: left;
+        padding: 5px 5px 5px 15px;
+        margin-bottom: 10px;
+      }
+      #product-header > *:not(h3):nth-child(odd) {
+        border-left: 6px solid green;
+      }
+      #product-header > *:not(h3):nth-child(even) {
+        border-left: 6px solid blue;
+      }
+      #cart * {
+        height: 50px;
+      }
+      .cart-value-buttons {
+        display: inline;
+      }
+      .cart-value-buttons * {
+        width: 50px;
+        border: 2px solid blue;
+      }
+      .value-button:hover {
+        background-color: lightgray;
+      }
+      .cart-value-buttons input {
+        display: inline;
+        text-align: center;
+      }
+      .btn-add-to-cart {
+        font-size: smaller;
+        padding: 10px;
+      }
+      #brand {
+        color: darkcyan;
+      }
+      #price {
+        color: darkcyan;
+        font-size: larger;
+        font-weight: 600;
+      }
+      #add-to-list {
+        color: green;
+      }
+      .product-detail {
+        padding: 10px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .header-product-info {
+        color: midnightblue;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        border-bottom: 1px groove lightgray;
+      }
+      #product-detail-list {
+        padding-left: 50px;
+      }
+      .product-table {
+        width: 100%;
+        border: 1px;
+        border-collapse: collapse;
+      }
+      .product-table td,
+      th {
+        border: 1px solid lightgray;
+        padding: 8px;
+      }
+      .product-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .product-table tr:hover {
+        background-color: grey;
+        color: white;
+      }
+      .product-detail input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Product Info Begin -->
+      <div id="product-info">
+        <div id="image-product">
+          <img src="Project1-Images/Project1-Images/arduino.jpg" alt="" />
+        </div>
+        <!-- Product Header Infos Begin -->
+        <div id="product-header">
+          <h3>Orijinal Arduino Uno Mini - Limited Edition</h3>
+          <p>Marka/Menşei:&nbsp;<span id="brand">Arduino</span></p>
+          <p>Stok Kodu: 20530</p>
+          <p>765,66 + KDV</p>
+          <p id="price">903,48 TL KDV Dahil</p>
+          <div id="cart">
+            <div class="cart-value-buttons">
+              <button id="decrase-button" class="value-button" value="decrease">
+                -
+              </button>
+              <input type="number" id="number" value="0" />
+              <button
+                id="increase-button"
+                class="value-button"
+                value="increase"
+              >
+                +
+              </button>
+            </div>
+            <input type="button" class="btn-add-to-cart" value="Sepete Ekle" />
+          </div>
+          <p id="add-to-list">* Alişveriş Listeme Ekle</p>
+        </div>
+        <!-- Product Header Infos End -->
+      </div>
+      <!-- Product Info End -->
+
+      <!-- Product Detail Infos Begin -->
+      <div class="product-detail">
+        <h4 class="header-product-info">
+          Orijinal Ardunio Uno Mini Özellikleri
+        </h4>
+        <ul id="product-detail-list">
+          <li>6 adet PWM çıkışı sağlayan 14 dijital I/O pini</li>
+          <li>6 analog giriş pini</li>
+          <li>16MHz seramik rezonatör</li>
+          <li>USB-C bağlantı noktası</li>
+          <li>USB veya harici bir güç kaynağı ile çalışır</li>
+          <li>Yeniden başlatma tuşu</li>
+          <li>Anahtar bileşenler</li>
+          <li>Mikroçip Teknlojisi ATmega328 MCU</li>
+          <li>USB Denetleyici Mikroçip Teknlojisi ATmega16U2 MCU</li>
+        </ul>
+      </div>
+      <!-- Product Detail Infos End -->
+
+      <!-- Product Technic Infos Begin -->
+      <div class="product-detail">
+        <h4 class="header-product-info">Teknik Özellikleri</h4>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Üretici Firma</th>
+              <th>Arduino</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SRAM</td>
+              <td>2KB</td>
+            </tr>
+            <tr>
+              <td>Ürün Boyutları</td>
+              <td>10.9 x 9.09 x 5 cm</td>
+            </tr>
+            <tr>
+              <td>Ürün Ağırlığı</td>
+              <td>73.6 g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Product Technic Infos End -->
+    </div>
+  </body>
+</html>

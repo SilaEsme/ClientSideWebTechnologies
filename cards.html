@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      *:not(h1) {
+        padding: 0px;
+      }
+      h1 {
+        margin-bottom: 30px;
+      }
+      .header {
+        text-align: center;
+      }
+      .card-image img {
+        border-radius: 3%;
+        width: 100%;
+        height: 230px;
+      }
+      .cook-hour {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: inline-flex;
+        background-color: lightgray;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 10px 4px 10px;
+        border-radius: 20px;
+        font-size: small;
+      }
+      .cook-hour i {
+        margin-right: 2px;
+      }
+      .container {
+        background-color: gainsboro;
+        width: 75%;
+        margin: 30px auto 0;
+        padding: 30px;
+        border-radius: 10px;
+      }
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      .card {
+        position: relative;
+        display: inline-block;
+        height: 290px;
+        max-width: 45%;
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px #aaaaaa;
+        border-radius: 3%;
+        margin-bottom: 10px;
+      }
+      .card-detail {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+        padding: 16px;
+      }
+      .card-detail > * {
+        min-width: 0;
+      }
+      .card-detail > button {
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 10%;
+        border: blue solid 1px;
+        color: blue;
+      }
+      .card-detail > button:hover {
+        border: green solid 1px;
+        color: white;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Card Container Begin -->
+    <div class="container">
+      <div class="header"><h1>Recipes</h1></div>
+      <div class="flex-container">
+        <!-- Card Begin -->
+        <div class="card">
+          <!-- Card Image Begin -->
+          <div class="card-image">
+            <img src="./Project1-Images/Project1-Images/stew.jpg" alt="" />
+            <div class="cook-hour">
+              <i class="material-icons">access_time</i>
+              <p>25 MINS</p>
+            </div>
+          </div>
+          <!-- Card Image End -->
+          <!-- Card Details Begin -->
+          <div class="card-detail">
+            <div class="card-detail-text">
+              <h3>5 Bean Chili Stew</h3>
+              <p>Recipe by Mehmet</p>
+            </div>
+            <button>Details</button>
+          </div>
+        </div>
+        <!-- Card Details End -->
+        <!-- Card End -->
+
+        <!-- Card Begin -->
+        <div class="card">
+          <!-- Card Image Begin -->
+          <div class="card-image">
+            <img src="./Project1-Images/Project1-Images/curry.jpg" alt="" />
+            <div class="cook-hour">
+              <i class="material-icons">access_time</i>
+              <p>40 MINS</p>
+            </div>
+          </div>
+          <!-- Card Image End -->
+          <!-- Card Details Begin -->
+          <div class="card-detail">
+            <div class="card-detail-text">
+              <h3>Tofu Curry</h3>
+              <p>Recipe by Ayaz</p>
+            </div>
+            <button>Details</button>
+          </div>
+          <!-- Card Details End -->
+        </div>
+        <!-- Card End -->
+      </div>
+    </div>
+    <!-- Card Container End -->
+  </body>
+</html>

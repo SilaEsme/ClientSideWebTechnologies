@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      * :not(h1) {
+        font-size: 16px;
+      }
+      .container {
+        background-color: gainsboro;
+        width: 400px;
+        margin: 30px auto 0;
+        text-align: center;
+        padding: 0px 1rem;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px #aaaaaa;
+        border: 1px solid #bfbfbf;
+      }
+      .container div {
+        margin-bottom: 20px;
+        padding: 1px;
+      }
+      .btn-social {
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        font-weight: bolder;
+        border-style: solid;
+      }
+      .btn-submit {
+        width: 100%;
+        background-color: chartreuse;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .btn-submit:hover {
+        background-color: darkgreen;
+        color: white;
+      }
+      .form {
+        border-radius: 8px;
+        height: 35px;
+      }
+      #txt-login input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 0cm;
+      }
+      #header {
+        margin-top: 20px;
+      }
+      #btn-google {
+        border-color: #db4437;
+        color: #db4437;
+      }
+      #btn-google:hover {
+        border-color: white;
+        color: white;
+        background-color: #db4437;
+      }
+      #btn-facebook {
+        border-color: #3b5998;
+        color: #3b5998;
+      }
+      #btn-facebook:hover {
+        border-color: white;
+        color: white;
+        background-color: #3b5998;
+      }
+      #btn-linkedin {
+        border-color: #0e76a8;
+        color: #0e76a8;
+      }
+      #btn-linkedin:hover {
+        border-color: white;
+        color: white;
+        background-color: #0e76a8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Card Container Begin -->
+    <div class="container">
+      <!-- Header Begin -->
+      <div id="header">
+        <h1>Login</h1>
+      </div>
+      <!-- Header End -->
+
+      <!-- Social Authentication Begin -->
+      <div>
+        <button id="btn-google" class="btn-social">G</button>
+        <button id="btn-facebook" class="btn-social">f</button>
+        <button id="btn-linkedin" class="btn-social">in</button>
+      </div>
+      <!-- Social Authentication End -->
+
+      <!-- Authentication Begin -->
+      <div>
+        <form action="" method="post">
+          <div id="txt-login">
+            <input
+              class="form"
+              type="text"
+              name="username"
+              id="txt-username"
+              placeholder="Username"
+            />
+            <input
+              class="form"
+              type="text"
+              name="password"
+              id="txt-password"
+              placeholder="Password"
+            />
+          </div>
+          <div id="submit-button">
+            <button class="btn-submit form" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- Authentication End -->
+    </div>
+    <!-- Card Container End -->
+  </body>
+</html>
