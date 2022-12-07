@@ -1,0 +1,24 @@
+.container{
+    background-color: #f1f3f4;
+    border: 1px solid lightgray;
+}
+i.fa-moon{
+    display: none;
+    visibility: none;
+}
+.display-screen{
+    background-color: #74c1f0;
+    border: 2px solid darkgray;
+}
+.display-numeric>button{
+    background-color: #cccccc;
+}
+.display-numeric>button:hover{
+    background-color: #dddddd;
+}
+#btn-res{
+    background-color: #71aed4;
+}
+#btn-res:hover{
+    background-color: #74c1f0;
+}
