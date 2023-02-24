@@ -6,6 +6,7 @@ $(document).ready(function(){
         // Validate if the input is number
         if($(this).val().match(/^\d+$/) || $(this).val() === "") {  
             const arr = $($(this).parent().parent().children().children(':input[name = "true"], :input[name = "false"]'))
+            const divNet = $($(this).parent().parent().children('.net').children())
             $.each(arr, function (indexInArray, valueOfElement) { 
                 $(valueOfElement).removeClass("border-danger")
             });
@@ -15,17 +16,25 @@ $(document).ready(function(){
 
             
             let sum = 0;
+            let net = 0;
             $.each(arr, function (indexInArray, valueOfElement) { 
                 sum = +sum + +$(valueOfElement).val();
             });
             if (sum > qn){
                 $(':focus').addClass("border-3 border-danger");
-            
             }
             else {
                 $.each(arr, function (indexInArray, valueOfElement) { 
                     $(valueOfElement).removeClass("border-danger")
                 });
+                // Calculate Net
+                if($(this).val() != ""){
+                    net = $(arr[0]).val() - $(arr[1]).val()- (($(arr[1]).val())/4)
+                    $(divNet).text(net)
+                }
+                else{
+                    $(divNet).text("-")
+                }
             }
         }
         else {
@@ -63,4 +72,8 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+
+
+});
 
